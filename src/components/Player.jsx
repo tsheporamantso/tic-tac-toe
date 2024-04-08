@@ -11,6 +11,7 @@ const Player = ({ initialName, symbol }) => {
   };
 
   const handleChange = (e) => {
+    e.preventDefault();
     setPlayerName(e.target.value);
   };
 
