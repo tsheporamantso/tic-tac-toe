@@ -5,7 +5,8 @@ const Player = ({ initialName, symbol }) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleClick = () => {
-    setIsEditing((editing) => !editing);
+    setIsEditing(() => !isEditing); // When update state based on old value you pass a function
+    // setIsEditing((editing) => !editing);
     // console.log(isEditing)
   };
 
