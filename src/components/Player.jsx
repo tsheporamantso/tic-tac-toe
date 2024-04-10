@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-const Player = ({ initialName, symbol }) => {
+const Player = ({ initialName, symbol, isActive}) => {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEditClick = () => {
-    setIsEditing(() => !isEditing); // When update state based on old value you pass a function
-    // setIsEditing((editing) => !editing);
+    setIsEditing((editing) => !editing); // When update state based on old value you pass a function.
     // console.log(isEditing)
   };
 
@@ -23,7 +22,7 @@ const Player = ({ initialName, symbol }) => {
   //   btnCaption = "Save"
   // }
   return (
-    <li>
+    <li className={isActive ? 'active' : undefined}>
       <span className="player">
         {!isEditing ? (
           <span className="player-name">{playerName}</span>
