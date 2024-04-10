@@ -2,7 +2,9 @@ import React from 'react'
 
 const Log = () => {
   return (
-    <div>Log</div>
+   <ol id="log">
+    
+   </ol>
   )
 }
 
