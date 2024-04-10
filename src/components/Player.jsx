@@ -4,7 +4,7 @@ const Player = ({ initialName, symbol }) => {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleClick = () => {
+  const handleEditClick = () => {
     setIsEditing(() => !isEditing); // When update state based on old value you pass a function
     // setIsEditing((editing) => !editing);
     // console.log(isEditing)
@@ -37,7 +37,7 @@ const Player = ({ initialName, symbol }) => {
         )}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button onClick={handleClick}>{isEditing ? "Save" : "Edit"}</button>
+      <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
     </li>
   );
 };
