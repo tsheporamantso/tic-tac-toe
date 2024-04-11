@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const Player = ({ initialName, symbol, isActive, onChangeName}) => {
+const Player = ({
+  initialName, symbol, isActive, onChangeName,
+}) => {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -39,7 +41,7 @@ const Player = ({ initialName, symbol, isActive, onChangeName}) => {
         )}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
+      <button onClick={handleEditClick}>{isEditing ? 'Save' : 'Edit'}</button>
     </li>
   );
 };
