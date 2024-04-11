@@ -78,6 +78,25 @@ h1 {
   animation: pulse 2s infinite ease-in-out;
 }
 
+.player-symbol {
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: #e1dec7;
+}
+
+.player-name {
+  display: inline-block;
+  width: 10rem;
+  font-size: 1rem;
+  color: #e1dec7;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
 #players.highlight-player li.active .player-name,
 #players.highlight-player li.active .player-symbol {
   color: #f6e35a;
@@ -95,6 +114,52 @@ h1 {
   text-align: center;
 }
 
+#game-board button {
+  width: 8rem;
+  height: 8rem;
+  border: none;
+  background: #aca788;
+  color: #3f3b00;
+  font-size: 5rem;
+  cursor: pointer;
+  font-family: 'Caprasimo', cursive;
+  padding: 1rem;
+}
+
+#pre-game button {
+  cursor: pointer;
+  background: none;
+  color: #f8c031;
+  border: none;
+  font-family: 'Caprasimo', cursive;
+  font-size: 4rem;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+  animation: pulse-text-size 2s infinite ease-out;
+}
+
+#game-over button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  background: none;
+  border: 2px solid #fcd256;
+  color: #fcd256;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s, color 0.2s;
+  box-shadow: 0 0 8px rgba(255, 187, 0, 0.4);
+}
+
+#game-hints button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #23221f;
+  font: inherit;
+  margin-top: 1.5rem;
+}
+
 #players button:hover {
   color: #f8ca31;
 }
@@ -104,19 +169,6 @@ h1 {
   padding: 0.5rem;
   border-radius: 4px;
   font-weight: bold;
-}
-
-.player-name {
-  display: inline-block;
-  width: 10rem;
-  font-size: 1rem;
-  color: #e1dec7;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0.5rem;
-  border-radius: 4px;
-  text-overflow: ellipsis;
-  text-align: center;
 }
 
 .player input {
@@ -131,12 +183,6 @@ h1 {
   text-transform: uppercase;
 }
 
-.player-symbol {
-  margin-left: 1rem;
-  font-size: 1rem;
-  color: #e1dec7;
-}
-
 ol {
   list-style: none;
   margin: 0;
@@ -147,16 +193,6 @@ ol {
   text-align: center;
 }
 
-#pre-game button {
-  cursor: pointer;
-  background: none;
-  color: #f8c031;
-  border: none;
-  font-family: 'Caprasimo', cursive;
-  font-size: 4rem;
-  text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
-  animation: pulse-text-size 2s infinite ease-out;
-}
 
 #game-board {
   display: flex;
@@ -175,18 +211,6 @@ ol {
   gap: 2rem;
   margin: 0;
   padding: 0;
-}
-
-#game-board button {
-  width: 8rem;
-  height: 8rem;
-  border: none;
-  background: #aca788;
-  color: #3f3b00;
-  font-size: 5rem;
-  cursor: pointer;
-  font-family: 'Caprasimo', cursive;
-  padding: 1rem;
 }
 
 #game-over {
@@ -215,20 +239,6 @@ ol {
   font-size: 2rem;
   text-align: center;
   color: #e1dec7;
-}
-
-#game-over button {
-  display: block;
-  margin: 0 auto;
-  font-size: 1.5rem;
-  background: none;
-  border: 2px solid #fcd256;
-  color: #fcd256;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s, color 0.2s;
-  box-shadow: 0 0 8px rgba(255, 187, 0, 0.4);
 }
 
 #game-over button:hover {
@@ -273,15 +283,6 @@ ol {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-#game-hints button {
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  color: #23221f;
-  font: inherit;
-  margin-top: 1.5rem;
 }
 
 @keyframes slide-in-from-left {
