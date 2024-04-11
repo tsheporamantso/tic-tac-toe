@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
-const Player = ({ initialName, symbol, isActive}) => {
+const Player = ({ initialName, symbol, isActive, onChangeName}) => {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEditClick = () => {
     setIsEditing((editing) => !editing); // When update state based on old value you pass a function.
+    if (isEditing) {
+      onChangeName(symbol, playerName);
+    }
     // console.log(isEditing)
   };
 
