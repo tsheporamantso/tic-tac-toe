@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const WINNING_COMBINATIONS = [
   [
     { row: 0, column: 0 },
