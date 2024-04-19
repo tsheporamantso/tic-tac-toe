@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { useState } from 'react';
 import Player from './components/Player';
 import GameBoard from './components/GameBoard';
